@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Life Shell</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+  <link rel="stylesheet" href="core/ui.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <span id="title">Life Shell</span>
+      <button id="themeToggle" title="Тема">🌓</button>
+    </header>
+    <main id="view">Загрузка…</main>
+    <nav id="bottomnav"></nav>
+  </div>
+
+  <script type="module" src="core/shell.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
