@@ -1,4 +1,4 @@
-const CACHE = 'life-shell-v1';
+const CACHE = 'life-shell-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -11,7 +11,8 @@ const ASSETS = [
   './core/ui.js',
   './core/theme.js',
   './core/ui.css',
-  './core/modules.registry.js'
+  './core/modules.registry.js',
+  './modules/running/index.js'
 ];
 
 self.addEventListener('install', (e) => {

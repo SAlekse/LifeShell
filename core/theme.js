@@ -4,6 +4,9 @@ export const theme = {
   init() {
     const saved = storage.get('theme', 'auto');
     this.apply(saved);
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (storage.get('theme') === 'auto') this.apply('auto');
+    });
   },
   apply(mode) {
     const real = mode === 'auto'
